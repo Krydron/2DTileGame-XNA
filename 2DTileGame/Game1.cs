@@ -19,7 +19,9 @@ namespace _2DTileGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            tile1 = new Tile("red");
+            tile1sprite = new Rectangle(tile1.GetPositionX(),tile1.GetPositionY(),tile1.GetWidth(),tile1.GetHeight());
+            pixelTexture = new Texture2D(GraphicsDevice, 1, 1);
             base.Initialize();
         }
 
@@ -45,7 +47,10 @@ namespace _2DTileGame
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            _spriteBatch.Begin();
+            //tile1.Draw();
+            //_spriteBatch.Draw();
+            _spriteBatch.End();
             base.Draw(gameTime);
         }
     }
